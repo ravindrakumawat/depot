@@ -1,35 +1,40 @@
 /* Global styles */
 
 #store #notice {
-        color: #000;
-        border: 2px solid red;
-        padding: 1em;
-        margin-bottom: 2em;
-        background-color: #f0f0f0;
-        font: bold smaller sans-serif;
+  color: #000;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
 }
 
 
 #store h1 {
-        font:  150% sans-serif;
-        color: #226;
-        border-bottom: 3px dotted #77d;
+  font:  150% sans-serif;
+  color: #226;
+  border-bottom: 3px dotted #77d;
+}
+
+
+#store .entry form, #store .entry form div {
+  display: inline;
 }
 
 /* Styles for products/index */
 
 #product_list table {
-        border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 #product_list table tr td {
-        padding: 5px;
-        vertical-align: top;
+  padding: 5px;
+  vertical-align: top;
 }
 
 #product_list .list_image {
-  width:        60px;
-  height:       70px;
+  width:60px;
+  height:70px;
 }
 
 #product_list .list_description {
@@ -131,7 +136,7 @@
 }
 
 #main {
-  margin-left: 13em;
+  margin-left: 22em;
   padding-top: 4ex;
   padding-left: 2em;
   background: white;
@@ -142,7 +147,7 @@
   padding-top: 1em;
   padding-left: 1em;
   padding-bottom: 1em;
-  width: 12em;
+  width: 21em;
   background: #141;
 }
 
@@ -153,4 +158,71 @@
 
 #time {
   color: #bfb;
+}
+
+/* Styles for the cart in the main page */
+
+#store .cart_title{
+  font: 120% bold;
+}
+
+#store .item_price, #store .total_line {
+  text-align: right;
+}
+
+#store .total_line .total_cell {
+  font-weight: bold;
+  border-top: 1px solid #595;
+}
+
+/* Styles for the cart in the sidebar */
+
+#cart, #cart table {
+  font-size: smaller;
+  color:  white;
+}
+
+#cart table {
+  border-top: 1px dotted #595;
+  border-bottom: 1px dotted #595;
+  margin-bottom: 10px;
+}
+
+.nice_width {
+  width:37px;
+}
+
+
+/* order form*/
+
+.depot_form {
+  fieldset {
+    background: #efe;
+    legend {
+      color: #dfd;
+      background: #141;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+    }
+  }
+
+  form {
+    lable {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+    .submit{
+      margin-left: 4em;
+    }
+    br {
+      display: none
+    }
+  }
 }

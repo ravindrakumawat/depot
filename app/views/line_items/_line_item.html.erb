@@ -1,0 +1,12 @@
+<% if line_item == @current_item %>
+<tr id="current_item" >
+<% else %>
+<tr>
+<% end %>
+    <td id="quantity_<%=line_item.id%>" class="nice_width"><%= line_item.quantity %> &times;</td>
+    <td><%= line_item.product.title %></td>
+    <td id="price_<%=line_item.id%>"class="item_price"><%= number_to_currency(line_item.total_price) %></td>
+    <td class="item_price"><%= button_to 'V', decrement_line_item_path(line_item),
+        method: :put, remote: true %></td>
+    <td class="item_price"><%= link_to "Remove", line_item, method: :delete, confirm: "Are You Sure?", remote: true %></td>
+  </tr>

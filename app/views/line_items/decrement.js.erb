@@ -1,0 +1,10 @@
+<% if @cart.line_items.size > 0 %>
+<% if @line_item.frozen? %>
+  jQuery("#quantity_<%= @line_item.id %>").parent().hide()
+ <% end %>
+jQuery("#quantity_<%= @line_item.id %>").html("<%= @line_item.quantity %> &times;").effect("highlight", {'color':'green'})
+jQuery("#price_<%= @line_item.id %>").html("<%= number_to_currency(@line_item.total_price) %>").effect("highlight", {'color':'green'})
+jQuery("#total_<%= @line_item.cart.id %>").html("<%= number_to_currency(@line_item.cart.total_price)%>").effect("highlight", {'color':'green'})
+<% else %>
+jQuery('#cart').effect("blind")
+<% end %>

@@ -80,4 +80,11 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def who_bought
+    @product = Porduct.find(params[:id])
+    respond_to do |format|
+      format.atom
+    end
+  end
 end

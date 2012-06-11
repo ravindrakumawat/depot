@@ -1,0 +1,5 @@
+<% if @cart.line_items.size > 0 %>
+jQuery('#cart').html("<%= escape_javascript(render(@cart))%>")
+<% else %>
+jQuery('#cart').effect("blind")
+<% end %>

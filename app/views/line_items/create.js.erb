@@ -1,0 +1,5 @@
+jQuery('#cart').show()
+jQuery('#cart').html("<%= escape_javascript(render(@cart))%>")
+<%#*jQuery('#cart').effect("slide")%>
+jQuery("tr#current_item").effect("highlight", {'color':'green'}, 3000)
+jQuery("#notice").hide();
